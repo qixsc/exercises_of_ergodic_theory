@@ -17,7 +17,7 @@ Last update in #datetime.today().display() by Qi-Xiang Huang.
  Show that the space $(TT, cal(B)_TT, m_TT)$ is isomorphic as a measure space to $(TT^2, cal(B)_(TT^2), m_(TT^2)).$
 ]
 #proof[
-  $f: 0.x_1 x_2 x_3 dots.c |-> (0.x_1 x_3 x_5 dots.c, 0.x_2 x_4 x_6 dots.c)$ is clearly a bijective function from $TT -> TT^2$.
+  $f: 0.x_1 x_2 x_3 dots.c |-> (0.x_1 x_3 x_5 dots.c, 0.x_2 x_4 x_6 dots.c)$ is clearly a bijective function from $TT$ to  $TT^2$ except a measure-zero set ${x in TT: x_(2k) = 9 "or" x_(2k - 1) = 9 "for all" k >= N in NN}$ (to avoid the situation like $(0.09090909 dots.c) |-> (0, 0)$.)
 ]
 
 #pagebreak()
