@@ -11,8 +11,6 @@
   color: orange,
 )
 
-#set document(title: [Exercise for Sect. ], author: "黃琦翔", date: datetime.today())
-Written in #datetime.today().display() by Qi-Xiang, Huang.
+Last update in #datetime.today().display() by Qi-Xiang, Huang.
 
-#counter(heading).update(2)
-= Exercise for Sect. 
+= Exercise for Sect. 2.

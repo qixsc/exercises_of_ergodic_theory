@@ -10,17 +10,14 @@
   variant: "Exercise",
   color: orange,
 )
+Last update in #datetime.today().display() by Qi-Xiang Huang.
 
-#set document(title: [Exercise for Sect. 2.1], author: "黃琦翔", date: datetime.today())
-Last update in #datetime.today().display() by Qi-Xiang, Huang.
-
-#counter(heading).update(2)
 = Exercise for Sect. 2.1
 #exercise("2.1.1")[
  Show that the space $(TT, cal(B)_TT, m_TT)$ is isomorphic as a measure space to $(TT^2, cal(B)_(TT^2), m_(TT^2)).$
 ]
 #proof[
-
+  $f: 0.x_1 x_2 x_3 dots.c |-> (0.x_1 x_3 x_5 dots.c, 0.x_2 x_4 x_6 dots.c)$ is clearly a bijective function from $TT -> TT^2$.
 ]
 
 #pagebreak()
