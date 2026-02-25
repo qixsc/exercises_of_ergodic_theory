@@ -12,7 +12,7 @@
 )
 
 #set document(title: [Exercise for Sect. 2.1], author: "黃琦翔", date: datetime.today())
-Written in #datetime.today().display() by Qi-Xiang, Huang.
+Last update in #datetime.today().display() by Qi-Xiang, Huang.
 
 #counter(heading).update(2)
 = Exercise for Sect. 2.1
@@ -69,3 +69,31 @@ Written in #datetime.today().display() by Qi-Xiang, Huang.
 ]
 
 #pagebreak()
+#exercise("2.1.6")[
+  Prove that the circle rotation $R_alpha: TT -> TT, R_alpha (t) = t + a (mod 1)$ is not measurably isomorphic to the circle-doubling map $T_2: TT -> TT, T_2 (t) = 2t (mod 1)$.
+]
+
+#proof[
+
+]
+
+#pagebreak()
+#exercise("2.1.7")[
+  Let $frak(X) = (X, cal(B), mu, T)$ be any measure-preserving system.
+  A sub-$sigma$-algebra $cal(A) subset.eq cal(B)_X$ with $T^(-1) cal(A) = cal(A)$ modulo $mu$ is called a $T$-_invarient sub-$sigma$-algebra_.
+  Show that the system $tilde(frak(X)) = (tilde(X), tilde(cal(B)), tilde(mu), tilde(T))$ defined by 
+  - $tilde(X) = {x in X^ZZ: x_(k+1) = T(x_k) "for all" k in ZZ};$
+  - $(tilde(T)(x))_k = x_(k+1)$ for all $k in ZZ$ and $x in tilde(X);$
+  - $tilde(mu)({x in tilde{X}: x_0 in A}) = mu(A)$ for any $A in cal(B),$ and $mu$ is invariant under $tilde(T);$
+  - $tilde(B)$ is the smallest $tilde(T)$-invariant $sigma$-algebra for which the map $pi: x |-> x_0$ from $tilde(X)$ to $X$ is measurable;
+  is an invertible measure-preserving system, and that the map $pi: x |-> x_0$ is a factor map.
+  The system $tilde(frak(X))$ is called the invertible extension of $frak(X).$
+]
+#proof[
+
+]
+
+#pagebreak()
+#exercise("2.1.8")[
+
+]
