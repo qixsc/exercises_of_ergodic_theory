@@ -60,8 +60,8 @@ Last update in #datetime.today().display() by Qi-Xiang, Huang.
 
 #pagebreak()
 #exercise("2.1.5")[
-  - Find a measure-preserving system $(X, cal(B), mu, T)$ with a non-trivial factor map $phi: X -> X.$
-  - Find an invertible measure-preserving system $(X, cal(B), mu, T)$ with a non-trivial factor map $phi: X -> X.$
+  + Find a measure-preserving system $(X, cal(B), mu, T)$ with a non-trivial factor map $phi: X -> X.$
+  + Find an invertible measure-preserving system $(X, cal(B), mu, T)$ with a non-trivial factor map $phi: X -> X.$
 ]
 
 #proof[
@@ -95,5 +95,31 @@ Last update in #datetime.today().display() by Qi-Xiang, Huang.
 
 #pagebreak()
 #exercise("2.1.8")[
+  Show that the invertible extension $tilde(frak(X))$ of a measure-preserving system $frak(X)$ constructed above has the following universal property.
+  For any extension
+  $ phi: (Y, cal(B)_Y, nu, S) -> (X, cal(B)_X, mu, T) $
+  for which $S$ is invertible, there exists a unique map
+  $ tilde(phi): (Y, cal(B)_Y, nu, S) -> (tilde(X), tilde(cal(B)), tilde(mu), tilde(T)) $
+  for which $phi = pi compose tilde(phi).$
+]
+#proof[
+
+]
+
+#pagebreak()
+#exercise("2.1.9")[
+  + Show that the invertible extension of the circle-doubling map $T_2,$
+    $ X_2 = {x in TT^ZZ: x_(k+1) = T_2 x_k "for all" k in ZZ}, $
+    is a compact abelian group with respect to the coordinate-wise addition defined by $(x+y)_k = x_k + y_k$ for all $k in ZZ$, 
+    and the topology inherited from the product topology on $TT^ZZ.$
+  + Show that the diagonal embedding $delta(r) = (r, r)$ embeds $ZZ[1/2]$ as a descrete subgroup of $RR times QQ_2$,
+    and that $X_2 tilde.equiv RR times QQ_2\/delta(ZZ[1/2]) tilde.equiv RR times ZZ_2\/ delta(ZZ)$ as compact abelian groups.
+    In particular, the map $tilde(T)_2$ (which mau be thought of as the left shift on $X_2$, or as the map that doubles in each coordinate) is conjugate to the map 
+    $ (s, r) + delta(ZZ[1/2]) |-> (2s, 2r) + delta(ZZ[1/2]) $
+    on $RR times QQ_2\/delta(ZZ[1/2]).$
+    The group $X_2$ constructed in this exercise is a simple example of a _solenoid_.
+]
+
+#proof[
 
 ]
