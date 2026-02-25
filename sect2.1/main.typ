@@ -23,6 +23,7 @@ Written in #datetime.today().display() by Qi-Xiang, Huang.
 
 ]
 
+#pagebreak()
 #exercise("2.1.2")[
   Show that the measure-preserving system $(TT, cal(B)_TT, m_TT, T_4)$, 
   where $T_4 (x) = 4 x (mod 1)$, is measurably isomorphic to the product system 
@@ -33,6 +34,7 @@ Written in #datetime.today().display() by Qi-Xiang, Huang.
 
 ]
 
+#pagebreak()
 #exercise("2.1.3")[
   For a map $T: X -> X$ and sets $A, B subset.eq X,$ prove the following.
   - $chi_A (T(x)) = chi_(T^(-1)(A)) (x);$
@@ -45,3 +47,25 @@ Written in #datetime.today().display() by Qi-Xiang, Huang.
 #proof[
 
 ]
+
+#pagebreak()
+#exercise("2.1.4")[
+  Let $X$ be a compact abelian group and let $T: X -> X$ be a countinuous homomorphism.
+  Does $T$ still preserve the Haar measure $m_X$ on $X$?
+]
+
+#proof[
+
+]
+
+#pagebreak()
+#exercise("2.1.5")[
+  - Find a measure-preserving system $(X, cal(B), mu, T)$ with a non-trivial factor map $phi: X -> X.$
+  - Find an invertible measure-preserving system $(X, cal(B), mu, T)$ with a non-trivial factor map $phi: X -> X.$
+]
+
+#proof[
+
+]
+
+#pagebreak()
