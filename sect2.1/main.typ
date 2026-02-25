@@ -41,3 +41,7 @@ Written in #datetime.today().display() by Qi-Xiang, Huang.
   - $T^(-1) (A laplace B) = T^(-1) (A) laplace T^(-1) (B).$
   Which of thexe properties also hold with the pre-image under $T^(-1)$ replaced by the forward image under $T$?
 ]
+
+#proof[
+
+]
