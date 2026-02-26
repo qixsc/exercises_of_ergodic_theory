@@ -17,7 +17,18 @@ Last update in #datetime.today().display() by Qi-Xiang Huang.
  Show that the space $(TT, cal(B)_TT, m_TT)$ is isomorphic as a measure space to $(TT^2, cal(B)_(TT^2), m_(TT^2)).$
 ]
 #proof[
-  $f: 0.x_1 x_2 x_3 dots.c |-> (0.x_1 x_3 x_5 dots.c, 0.x_2 x_4 x_6 dots.c)$ is clearly a bijective function from $TT$ to  $TT^2$ except a measure-zero set ${x in TT: x_(2k) = 9 "or" x_(2k - 1) = 9 "for all" k >= N in NN}$ (to avoid the situation like $(0.09090909 dots.c) |-> (0, 0)$.)
+  For any $x in TT,$ express $x$ in an infinite series $(x_i)_(i in NN)$ by $x_i$ is the $i$-th binary place of $x$.
+  Let $D = {a/2^k: a, k in NN "and" a < 2^k}$ denote the setof dyadic rationals and $A = TT without D$ which is measure $1$ since $D$ is countable.
+  Then, define $A^2 subset TT^2$ by $A^2 = T^2 without (TT times D union D times TT).$
+  $A^2$ is also measure $1.$
+  In short, $A$ and $A^2$ are the sets only containing the points have infinite binary digits.
+  The map $f: 0.x_1 x_2 x_3 dots.c |-> (0.x_1 x_3 x_5 dots.c, 0.x_2 x_4 x_6 dots.c)$ is clearly a bijective function from $A$ to  $A^2$. 
+  
+  *Claim: $f$ is bi-measurable and $f$ preserves measure.*
+  - $f$ is measurable: Given a rectangle $B = ([a, b) times [c, d)) inter A^2$, there exists the biggest $k_1$ and $k_2 in NN$ such that the first $k_1$ digits of $a, b$ are the same and $k_2$ for $c, d.$
+  - $f^(-1)$ is measurable:
+  - $f$ preserves measure:
+  Thus, $(TT, cal(B)_TT, m_TT)$ is isomorphic as a measure space to $(TT^2, cal(B)_(TT^2), m_(TT^2)).$
 ]
 
 #pagebreak()
