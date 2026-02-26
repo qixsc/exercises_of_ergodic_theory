@@ -18,12 +18,13 @@ Last update in #datetime.today().display() by Qi-Xiang Huang.
 ]
 #proof[
   For any $x in TT,$ express $x$ in an infinite series $(x_i)_(i in NN)$ by $x_i$ is the $i$-th binary place of $x$.
-  Let $D = {a/2^k: a, k in NN "and" a < 2^k}$ denote the setof dyadic rationals and $A = TT without D$ which is measure $1$ since $D$ is countable.
+  Let $D = {a/2^k: a, k in NN "and" a < 2^k}$ denote the set of dyadic rationals and $D$ is measure zero since $D$ is countable.
   Then, define $A^2 subset TT^2$ by $A^2 = T^2 without (TT times D union D times TT).$
-  $A^2$ is also measure $1.$
-  In short, $A$ and $A^2$ are the sets only containing the points have infinite binary digits.
-  The map $f: 0.x_1 x_2 x_3 dots.c |-> (0.x_1 x_3 x_5 dots.c, 0.x_2 x_4 x_6 dots.c)$ is clearly a bijective function from $A$ to  $A^2$. 
-  
+  $A^2$ is measure $1$ since $D times TT$ and $TT times D$ are measure zero.
+  In this construction, $A^2$ is the set only containing the points have infinite binary digits.
+  Define $f: 0.x_1 x_2 x_3 dots.c |-> (0.x_1 x_3 x_5 dots.c, 0.x_2 x_4 x_6 dots.c)$ and $A = f^(-1)(A^2).$
+  $A$ is measurable and measure $1$ since $A = TT without (D union D_"odd" union D_"even")$ where the two sets stand for the set contiains fintely many $0$ or $1$ in odd or even digits.
+
   *Claim: $f$ is bi-measurable and $f$ preserves measure.*
   - $f$ is measurable: Given a rectangle $B = ([a, b) times [c, d)) inter A^2$, there exists the biggest $k_1$ and $k_2 in NN$ such that the first $k_1$ digits of $a, b$ are the same and $k_2$ for $c, d.$
   - $f^(-1)$ is measurable:

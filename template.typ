@@ -11,6 +11,6 @@
   color: orange,
 )
 
-Last update in #datetime.today().display() by Qi-Xiang, Huang.
+Last update in #datetime.today().display() by Qi-Xiang Huang.
 
 = Exercise for Sect. 2.
