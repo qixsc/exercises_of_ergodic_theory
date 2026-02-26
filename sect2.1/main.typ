@@ -21,14 +21,24 @@ Last update in #datetime.today().display() by Qi-Xiang Huang.
   Let $D = {a/2^k: a, k in NN "and" a < 2^k}$ denote the set of dyadic rationals and $D$ is measure zero since $D$ is countable.
   Then, define $A^2 subset TT^2$ by $A^2 = T^2 without (TT times D union D times TT).$
   $A^2$ is measure $1$ since $D times TT$ and $TT times D$ are measure zero.
-  In this construction, $A^2$ is the set only containing the points have infinite binary digits.
+  In this construction, $A^2$ is the set only containing the points have infinitely many $0$ and $1$ digits.
   Define $f: 0.x_1 x_2 x_3 dots.c |-> (0.x_1 x_3 x_5 dots.c, 0.x_2 x_4 x_6 dots.c)$ and $A = f^(-1)(A^2).$
-  $A$ is measurable and measure $1$ since $A = TT without (D union D_"odd" union D_"even")$ where the two sets stand for the set contiains fintely many $0$ or $1$ in odd or even digits.
+  $A$ is measurable and measure $1$ since $A = TT without (D union D_"odd" union D_"even")$ where the two sets stand for the set of points contiains fintely many $0$ or $1$ in odd or even digits.
 
-  *Claim: $f$ is bi-measurable and $f$ preserves measure.*
-  - $f$ is measurable: Given a rectangle $B = ([a, b) times [c, d)) inter A^2$, there exists the biggest $k_1$ and $k_2 in NN$ such that the first $k_1$ digits of $a, b$ are the same and $k_2$ for $c, d.$
-  - $f^(-1)$ is measurable:
-  - $f$ preserves measure:
+  To prove $f$ is bimeasurable, define the cylender set $I_(x_1, x_2, dots, x_n) = {y in A: y_i = x_i "for" i <= n}$ and collection of the intervals $cal(S) := {I_(x_1, dots, x_n): x_i in {0, 1} "and" n in NN}$ which is a $pi$-system on $A$ that $sigma(cal(S)) = cal(B)_TT.$
+  Similarly, $cal(S)^2 := {R_((x_1, dots, x_n), (y_1, dots, y_m))}$ where $R_((x_1, dots, x_n), (y_1, dots, y_m)) = {(z, w) in A^2: z_i = x_i, w_j = y_j "for" i <= n "and" j <=m}$ and $sigma(cal(S^2)) = cal(B)_(TT^2).$
+  Then, we want to show $f$ and $f^(-1)$ maps the cylinder sets into measurable sets.
+
+  Given an $I_(x_1, x_2, dots, x_(2k)),$ $f(I_(dots, x_(2k))) = R_((x_1, dots, x_(2k-1)), (x_2, dots, x_(2k))),$ 
+  and given $I_(x_1, x_2, dots, x_(2k+1))$ get $f(I) = R_((dots, x_(2k+1)), (dots, x_2k)).$
+  These two situation is trivially measurable.
+
+  In contrast, for given $R_((dots, x_n), (dots, y_m)),$ we can divide it into finite disjoint union of cylinders $R_((dots, x_k), (dots, y_k))$ where $k <= max(n, m).$ 
+  Then the preimage is easy to calculate, $f^(-1) (R_((dots, x_k), (dots, y_k))) = I_(x_1, y_1, dots, x_k, y_k)$ measurable.
+
+  Last is to check if $f$ preserves measure.
+  $m_TT (I_(dots, x_k)) = 2^(-k)$ and $m_(TT^2) (R_((dots, x_n), (dots, y_m))) = 2^(-n) times 2^(-m) = 2^(-n m).$
+  From the result of mapping above, $f$ and $f^(-1)$ preserves measure on cylinder sets and thus preserves on all measurable sets.
   Thus, $(TT, cal(B)_TT, m_TT)$ is isomorphic as a measure space to $(TT^2, cal(B)_(TT^2), m_(TT^2)).$
 ]
 
