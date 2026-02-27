@@ -50,7 +50,7 @@ Last update in #datetime.today().display() by Qi-Xiang Huang.
 ]
 
 #proof[
-
+  By the construction above, this is trivial by treating $T_k$ as moving all digit leftward $k$ times.
 ]
 
 #pagebreak()
@@ -64,7 +64,7 @@ Last update in #datetime.today().display() by Qi-Xiang Huang.
 ]
 
 #proof[
-
+  The four are easy and after replacing, only union still holds.
 ]
 
 #pagebreak()
