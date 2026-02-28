@@ -1,4 +1,4 @@
-#import "@preview/thmbox:0.3.0": *
+#import "@preview/thmbox:0.3.0": * 
 #show: thmbox-init()
 
 #set text(font: ("Fira Sans", "Noto Sans TC"), size: 12pt)
@@ -74,7 +74,7 @@ Last update in #datetime.today().display() by Qi-Xiang Huang.
 ]
 
 #proof[
-
+  Let $T$ be the constant map from $X$ to identity of $X,$ $T$ satisfies the assumption and may not preserve measure if $X$ contains more than one elements.
 ]
 
 #pagebreak()
@@ -84,6 +84,11 @@ Last update in #datetime.today().display() by Qi-Xiang Huang.
 ]
 
 #proof[
+  + $X = {0, 1}^NN$ be the sample space of a infinite series of outcome of Bernoulli trials, and $cal(B)$ is the $sigma$-algebra generate by all cylinder sets.
+    $mu$ is the Bernulli measure with probability $1/2$ and $1/2.$
+    Define $T$ by $(T x)_n = x_(n+1)$ for $x in X$ which is the left shift map on $X$.
+    Then, claim that $phi(x_n) = x_n + x_(n+1) mod 2$ is a non-trivial factor on $X$ to itself.
+
 
 ]
 
