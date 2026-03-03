@@ -87,9 +87,21 @@ Last update in #datetime.today().display() by Qi-Xiang Huang.
   + $X = {0, 1}^NN$ be the sample space of a infinite series of outcome of Bernoulli trials, and $cal(B)$ is the $sigma$-algebra generate by all cylinder sets.
     $mu$ is the Bernulli measure with probability $1/2$ and $1/2.$
     Define $T$ by $(T x)_n = x_(n+1)$ for $x in X$ which is the left shift map on $X$.
-    Then, claim that $phi(x_n) = x_n + x_(n+1) mod 2$ is a non-trivial factor on $X$ to itself.
+    Then, claim that $phi(x_n) = x_n + x_(n+1) mod 2$ is a non-trivial factor map on $X$ to itself.
 
+    First, $phi$ is not an isomorphism since it maps two elements (one solution and its comjugate) to one element,
+    and $phi$ is surjective since for $y in X, y = y+0 mod 2.$
+    Then, $(phi compose T(x))_n = phi((T x)_n) = phi(x_(n+1)) = x_(n+1) + x_(n+2) mod 2 = (phi(x))_(n+1) = T((phi(x))_n) = (T compose phi (x))_n.$
 
+    Last, for $C$ is an cylinder set given by ${x in X: x_(n_1) = c_1, dots, x_(n_k) = c_k}.$
+    If $n_i$ and $n_j$ are not next to each other, the choice of each won't affect to each other,
+    so we can divides into not adjacency parts and multipy them after computing each part.
+    Thus, we only focus on the situation that $n_j = n_i + 1,$ $n_l = n_j+1$ and so on.
+    If $k = 1,$ $mu(phi^(-1)(C)) = 1/2 dot 1/2 + 1/2 dot 1/2 = 1/2 = mu(C)$($11$ and $00$ or $01$ and $10$.)
+    If $k = 2,$ $mu(phi^(-1)(C)) = 1/2 dot 1/2 dot 1/2 dot 2 = 1/4 = mu(C)$ (the whole process actually depends on the first one.)
+    In conclusion, $mu(phi^(-1)(C)) = mu(C)$ for all cylinder sets and thus $phi$ is measure-preserving on $cal(B)$.
+
+  + Just modify $X$ into ${0, 1}^ZZ$, the other settings are still the same.
 ]
 
 #pagebreak()
