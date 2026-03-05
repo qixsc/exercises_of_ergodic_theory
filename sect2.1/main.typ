@@ -94,8 +94,8 @@ Last update in #datetime.today().display() by Qi-Xiang Huang.
     Then, $(phi compose T(x))_n = phi((T x)_n) = phi(x_(n+1)) = x_(n+1) + x_(n+2) mod 2 = (phi(x))_(n+1) = T((phi(x))_n) = (T compose phi (x))_n.$
 
     Last, for $C$ is an cylinder set given by ${x in X: x_(n_1) = c_1, dots, x_(n_k) = c_k}.$
-    If $n_i$ and $n_j$ are not next to each other, the choice of each won't affect to each other,
-    so we can divides into not adjacency parts and multipy them after computing each part.
+    If $n_i$ and $n_j$ are not next to each other, the choice of each one won't affect to another one,
+    so we can divides into not adjacency parts and multiply them after computing each part.
     Thus, we only focus on the situation that $n_j = n_i + 1,$ $n_l = n_j+1$ and so on.
     If $k = 1,$ $mu(phi^(-1)(C)) = 1/2 dot 1/2 + 1/2 dot 1/2 = 1/2 = mu(C)$($11$ and $00$ or $01$ and $10$.)
     If $k = 2,$ $mu(phi^(-1)(C)) = 1/2 dot 1/2 dot 1/2 dot 2 = 1/4 = mu(C)$ (the whole process actually depends on the first one.)
@@ -106,11 +106,21 @@ Last update in #datetime.today().display() by Qi-Xiang Huang.
 
 #pagebreak()
 #exercise("2.1.6")[
-  Prove that the circle rotation $R_alpha: TT -> TT, R_alpha (t) = t + a (mod 1)$ is not measurably isomorphic to the circle-doubling map $T_2: TT -> TT, T_2 (t) = 2t (mod 1)$.
+  Prove that the circle rotation $R_alpha: TT -> TT, R_alpha (t) = t + a_alpha (mod 1)$ is not measurably isomorphic to the circle-doubling map $T_2: TT -> TT, T_2 (t) = 2t (mod 1)$.
 ]
 
 #proof[
-
+  Assume there is an isomorphic measurable function $phi: TT -> TT$ such that $R_alpha compose phi = phi compose T_2$ almost everywhere.
+  Then, for almost every $x in (0, 1/2)$ satisfies the equation,
+  $
+    phi(x) + alpha mod 1 &= phi(2 x)\
+    (phi(2 x) - phi(x)) mod 1 &= alpha\
+    => cases(phi(2x) - phi(a) &= alpha, phi(2x) - phi(b) &= alpha-1),
+  $
+  where one of $a, b$ is $x$ and another is $x + 1/2.$
+  Minus that two equations can get $phi(b) - phi(a) = 1$;
+  however, it is impossible since range of $phi$ is $[0, 1).$
+  Thus, the two map are not measurable isomorphic.
 ]
 
 #pagebreak()
