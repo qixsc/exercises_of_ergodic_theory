@@ -10,8 +10,11 @@
   variant: "Exercise",
   color: orange,
 )
-Last update in #datetime.today().display() by Qi-Xiang Huang.
-
+#align(center+horizon)[
+  *Exercises of Ergodic Theory*\
+  Last update in #datetime.today().display() by Qi-Xiang Huang.
+]
+#pagebreak()
 = Exercise for Sect. 2.1
 #exercise("2.1.1")[
  Show that the space $(TT, cal(B)_TT, m_TT)$ is isomorphic as a measure space to $(TT^2, cal(B)_(TT^2), m_(TT^2)).$
@@ -130,13 +133,15 @@ Last update in #datetime.today().display() by Qi-Xiang Huang.
   Show that the system $tilde(frak(X)) = (tilde(X), tilde(cal(B)), tilde(mu), tilde(T))$ defined by 
   - $tilde(X) = {x in X^ZZ: x_(k+1) = T(x_k) "for all" k in ZZ};$
   - $(tilde(T)(x))_k = x_(k+1)$ for all $k in ZZ$ and $x in tilde(X);$
-  - $tilde(mu)({x in tilde{X}: x_0 in A}) = mu(A)$ for any $A in cal(B),$ and $mu$ is invariant under $tilde(T);$
-  - $tilde(B)$ is the smallest $tilde(T)$-invariant $sigma$-algebra for which the map $pi: x |-> x_0$ from $tilde(X)$ to $X$ is measurable;
+  - $tilde(mu)({x in tilde(X): x_0 in A}) = mu(A)$ for any $A in cal(B),$ and $tilde(mu)$ is invariant under $tilde(T);$
+  - $tilde(cal(B))$ is the smallest $tilde(T)$-invariant $sigma$-algebra for which the map $pi: x |-> x_0$ from $tilde(X)$ to $X$ is measurable;
   is an invertible measure-preserving system, and that the map $pi: x |-> x_0$ is a factor map.
   The system $tilde(frak(X))$ is called the invertible extension of $frak(X).$
 ]
 #proof[
-
+  - Invertible: $(tilde(T)^(-1)(x))_k = x_(k-1)$ is clearly the inverse map, and $tilde(T)^(-1)$ is also measurable.
+  - Measure-preserving: $tilde(mu)$ is invarant under $tilde(T)$ implies the measure-preserving condition.
+  - Factor map: for any $x in tilde(X),$ $pi compose tilde(T)(x) = x_1 = T(x_0) = T(pi(x)).$
 ]
 
 #pagebreak()
