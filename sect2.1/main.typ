@@ -154,7 +154,17 @@
   for which $phi = pi compose tilde(phi).$
 ]
 #proof[
+  Let $tilde(phi)(y_0) = (dots, phi(S^(-2) y_0), phi(S^(-1) y_0), phi(y_0), phi(S y_0), phi(S^2 y_0), dots)$,
+  and $tilde(phi)$ satisfies $phi = pi compose tilde(phi).$
+  Also, $tilde(phi) compose S = tilde(T) compose tilde(phi)$ and $tilde(phi) compose S^n = tilde(T^n) compose tilde(phi)$ for all $n in ZZ.$
 
+  If there is another map $tilde(phi)'$ such that $phi = pi compose tilde(phi)',$
+  for any $y in Y,$ $pi compose tilde(phi)'(y) = phi(y) = pi compose tilde(phi)(y).$
+  Using the projection map and the property above,
+  $
+    (tilde(phi)'(y))_(k) = pi(tilde(T)^k compose tilde(phi) (y)) = pi(tilde(phi) compose S^n (y)) = (tilde(phi)(y))_k.
+  $
+  Thus, the map is unique.
 ]
 
 #pagebreak()
