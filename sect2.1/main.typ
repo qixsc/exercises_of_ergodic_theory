@@ -175,12 +175,16 @@
     and the topology inherited from the product topology on $TT^ZZ.$
   + Show that the diagonal embedding $delta(r) = (r, r)$ embeds $ZZ[1/2]$ as a descrete subgroup of $RR times QQ_2$,
     and that $X_2 tilde.equiv RR times QQ_2\/delta(ZZ[1/2]) tilde.equiv RR times ZZ_2\/ delta(ZZ)$ as compact abelian groups.
-    In particular, the map $tilde(T)_2$ (which mau be thought of as the left shift on $X_2$, or as the map that doubles in each coordinate) is conjugate to the map 
+    In particular, the map $tilde(T)_2$ (which may be thought of as the left shift on $X_2$, or as the map that doubles in each coordinate) is conjugate to the map 
     $ (s, r) + delta(ZZ[1/2]) |-> (2s, 2r) + delta(ZZ[1/2]) $
     on $RR times QQ_2\/delta(ZZ[1/2]).$
     The group $X_2$ constructed in this exercise is a simple example of a _solenoid_.
 ]
 
 #proof[
+  + If $x, y in X_2,$ $(x+y)_k = x_k + y_k = T_2 x_(k-1) + T_2 y_(k-1) = T_2 (x_(k-1) + y_(k-1)) = T_2 (x+y)_(k-1).$
+    The zero sequence $0$ is the identity of $X_2$ and $(x+y)_k = (y+x_k)$ for all $k$ implies $X_2$ is an abelian group.
 
+    Since a sequence in a product topology converges if and only if it converges pointwise, the compactness is true by the compactness of each $TT$.
+  + 
 ]
