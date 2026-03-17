@@ -72,13 +72,21 @@
 #pagebreak()
 #exercise("2.2.3")[
   + Let $(X, d)$ be a compact metric space and let $T: X -> X$ be a continuous map.
-    Suppose that $mu$ is a $T$-invariant probability space defined on the Borel subsets of $X.$
+    Suppose that $mu$ is a $T$-invariant probability measure defined on the Borel subsets of $X.$
     Prove that for $mu$-almost every $x in X$
-    there si a sequence $n_k -> infinity$ with $T^(n_k) (x) -> x$ as $k -> infinity.$
+    there is a sequence $n_k -> infinity$ with $T^(n_k) (x) -> x$ as $k -> infinity.$
   + Prove that the same conclusion holds under the assumption that $X$ is a metric space,
     $T: X -> X$ is Borel measurable,
     and $mu$ is a $T$-invariant probability measure.
 ]
 #proof[
-  
+  + For all $k in NN,$ let $union_(x in X) D(x, 1/k)$ be the union of open disks on $X.$     
+    Since $X$ is compact, there is finite set $I_k$ such that $union_(x in I) D(x, 1/k)$ cover $X$.
+    Then, suppose $F_k subset I_k$ such that $mu(D(x, 1/k)) > 0$ for all $x in I_k without F_k$ and is $0$ for all $x in F_k.$ 
+    By Poincare's theorem, for $x in I_k without F_k$ and a.e. $y in D(x, 1/k),$ $T^n (y) in D(x, 1/k)$ i.o.
+    Thus, let $G_(x, k) = {y in D(x, 1/k): T^n (y) "not back to" D(x, 1/k "i.o.")}$ and it is measure zero.
+    Union of the sets $D(x, 1/k)$ for $x in F_k$ and $G_(x, k),$ called $E_k$, is measure zero since it is union of finite measure zero sets.
+    Last, the union of $E_k$ for all $k in NN$ is still measure zero and for all $x in X without (union E_k)$
+    satisfies $T^(n_k) x -> x$ as $k -> infinity$ by choosing indices from each step. 
+  + 
 ]
