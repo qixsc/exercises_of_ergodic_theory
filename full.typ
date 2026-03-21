@@ -6,3 +6,9 @@
   pages: (start: 1),
   width: auto,
 )
+
+#muchpdf(
+  read("sect2.2/main.pdf", encoding: none),
+  pages: (start: 1),
+  width: auto,
+)

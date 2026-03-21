@@ -10,6 +10,8 @@
   variant: "Exercise",
   color: orange,
 )
+#let supp = math.op("supp")
+
 #align(center+horizon)[
   *Exercises of Ergodic Theory*\
   Last update in #datetime.today().display() by Qi-Xiang Huang.
@@ -88,5 +90,22 @@
     Union of the sets $D(x, 1/k)$ for $x in F_k$ and $G_(x, k),$ called $E_k$, is measure zero since it is union of finite measure zero sets.
     Last, the union of $E_k$ for all $k in NN$ is still measure zero and for all $x in X without (union E_k)$
     satisfies $T^(n_k) x -> x$ as $k -> infinity$ by choosing indices from each step. 
-  + 
+  + Suppose $S = supp(mu) := {x in X: mu(D(x, r)) > 0 forall r > 0}.$
+    / Claim that $mu(S) = 1.$: Observe on the set $S^c = X without S,$ $x in S^c$ implies there is some $r_x > 0$ such that $mu(D(x, r_x)) > 0.$
+      Also, the $D(x, r_x)$ is the open ball contains in $S^c,$ which implies $S^c$ is open.
+      Therefore, $mu(S^c) = mu(union_(x in S^c) D(x, r_x))$ by open.
+      For any countable index set $II subset S^c,$ we have $ mu(union_(x in II) D(x, r_x)) <= sum_(x in II) mu(D(x, r_x)) = sum_(x in II) 0 = 0. $
+      By the definition of uncountable summation, $ mu(S^c) <= sum_(x in S^c) mu(D(x, r_x)) = sup_(II) sum_(x in II) mu(D(x, r_x)) = 0. $
+      Thus, $mu(S) = 1.$    
+    Then, for any $r > 0.$
+    / Claim that $S$ is cover by at most countable open ball with radius $r$:
+      Suppose $R$ is a collection of points in $S$ such that $x, y in R,$ $d(x, y) > r.$
+      Then, the set $C = union_(x in R) D(x, r/2)$ is a union of disjoint sets in $R.$
+      By the assumption that $D(x, r/2)$ has positive measure for any $x in S, r/2 > 0,$
+      we have $mu(C) = sum_(x in R) mu(D(x, r/2)).$
+      If $R$ is uncountable, the summation of uncountable positive real numbers goes to infinity, contradicts to the condition of probability space.
+      Thus, $R$ is at most countable and $S$ is cover by $union_(x in RR) D(x, r)$
+      by finding the biggest $R$ satisfies the assumption.
+    Let $r = 1/k$ for each $k,$ and by the similar prove of 1., we have for almost every $x in S$ returns to its neighborhood infinitely often with distance at most $2r.$ 
+    Then take intersection of each $k,$ we have for almost every $x,$ $T^(n_k) x$ converges to $x.$    
 ]
