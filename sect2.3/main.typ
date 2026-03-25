@@ -11,6 +11,7 @@
   color: orange,
 )
 #let supp = math.op("supp")
+#let closure = math.op("cl")
 
 #align(center+horizon)[
   *Exercises of Ergodic Theory*\
@@ -24,6 +25,7 @@
   for which $T times S$ is not ergodic with respect to the product measure $mu times nu.$
 ]
 #proof[
+  See exercise 2.3.2.
 ]
 
 #pagebreak()
@@ -31,10 +33,15 @@
   Define a map $R: TT times TT -> TT times TT$ by $R(x, y) = (x + alpha, y+alpha)$ for an irrational $alpha.$
   Show that for any set of the form $A times B$ with $A, B$ measurable subsets of $TT$
   (such a set is called a measurable rectangle) has the property of
-  $ T^(-1) (A times B) = A times B => (m_TT times m_TT)(A times B) in {0, 1}, $
+  $ R^(-1) (A times B) = A times B quad ("a.e.") => (m_TT times m_TT)(A times B) in {0, 1}, $
   but the transformation $R$ is not ergodic, even if $alpha$ is irrational.
 ]
 #proof[
+  Suppose $(m_TT times m_TT) (A times B) in (0, 1)$ with the property $R^(-1) (A times B) = A times B$ almost everywhere,
+  where $A, B$ are intervals.
+  Take $C = closure(A times B)$ has same measure with $A times B$ (by property of Lebesgue measure),
+  thus there is an open (interval) rectangle $A' times B' subset TT times TT without C$ with positive measure.
+  By the ergodicity of $R$ in one dimension, we have there is a 
 ]
 
 #pagebreak()
@@ -46,6 +53,7 @@
     with respect to $m_(TT^n).$
 ]
 #proof[
+
 ]
 
 #pagebreak()
