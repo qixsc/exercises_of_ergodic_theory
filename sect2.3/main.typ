@@ -30,18 +30,21 @@
 
 #pagebreak()
 #exercise("2.3.2")[
-  Define a map $R: TT times TT -> TT times TT$ by $R(x, y) = (x + alpha, y+alpha)$ for an irrational $alpha.$
+  Define a map $R: TT times TT -> TT times TT$ by $R(x, y) = (x + alpha, y + alpha)$ for an irrational $alpha.$
   Show that for any set of the form $A times B$ with $A, B$ measurable subsets of $TT$
   (such a set is called a measurable rectangle) has the property of
   $ R^(-1) (A times B) = A times B quad ("a.e.") => (m_TT times m_TT)(A times B) in {0, 1}, $
   but the transformation $R$ is not ergodic, even if $alpha$ is irrational.
 ]
 #proof[
-  Suppose $(m_TT times m_TT) (A times B) in (0, 1)$ with the property $R^(-1) (A times B) = A times B$ almost everywhere,
-  where $A, B$ are intervals.
-  Take $C = closure(A times B)$ has same measure with $A times B$ (by property of Lebesgue measure),
-  thus there is an open (interval) rectangle $A' times B' subset TT times TT without C$ with positive measure.
-  By the ergodicity of $R$ in one dimension, we have there is a 
+  Suppose that $A times B$ is a rectangle that $R^(-1)(A times B) = A times B$ up to measure zero sets.
+  Since $R$ is just a shift map, $R^(-1) (A times B)$ is still a rectangle and $R^(-1) (A times B) = R^(-1)_alpha (A) times R^(-1)_alpha (B).$
+  Thus, we have $ A = R^(-1)_alpha (A) "and" B = R^(-1)_alpha (B) quad "a.e.". $
+  By the ergodicity of $R_alpha,$ we have $m_TT (A), m_TT (B) in {0, 1}$ and $m_i(TT^2) (A times B) in {0, 1}.$
+
+  Besides, we can have an invarient set $I = {(x, y): abs(x-y) < 1/3}.$
+  The map $R$ is trivially invariant by the criteria of the set.
+  And the measure of the set is $2/3.$
 ]
 
 #pagebreak()

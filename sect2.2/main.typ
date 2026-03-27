@@ -91,7 +91,7 @@
     Last, the union of $E_k$ for all $k in NN$ is still measure zero and for all $x in X without (union E_k)$
     satisfies $T^(n_k) x -> x$ as $k -> infinity$ by choosing indices from each step. 
   + Suppose $S = supp(mu) := {x in X: mu(D(x, r)) > 0 forall r > 0}.$
-    / Claim that $mu(S) = 1.$: Observe on the set $S^c = X without S,$ $x in S^c$ implies there is some $r_x > 0$ such that $mu(D(x, r_x)) > 0.$
+    / Claim that $mu(S) = 1.$: Observe on the set $S^c = X without S,$ $x in S^c$ implies there is some $r_x > 0$ such that $mu(D(x, r_x)) = 0.$
       Also, the $D(x, r_x)$ is the open ball contains in $S^c,$ which implies $S^c$ is open.
       Therefore, $mu(S^c) = mu(union_(x in S^c) D(x, r_x))$ by open.
       For any countable index set $II subset S^c,$ we have $ mu(union_(x in II) D(x, r_x)) <= sum_(x in II) mu(D(x, r_x)) = sum_(x in II) 0 = 0. $
