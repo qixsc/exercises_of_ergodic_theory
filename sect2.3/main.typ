@@ -56,7 +56,13 @@
     with respect to $m_(TT^n).$
 ]
 #proof[
+  + Suppose that $T = R_alpha_1 times R_alpha_2$ and $f$ is a $T$-invariant $L^2$ function from $TT^2$ to $CC.$
+    By the fourier expansion, $ f(x, y) = sum_(n, m in ZZ) C_(n, m) e^(2 pi i (n x + m y)). $
+    Thus, by the invariance, $ f(T(x, y)) &= sum_(n, m in ZZ) C_(n, m) e^(2 pi i (n(x+alpha_1) + m(y+alpha_2)))\
+    &= sum_(n, m in ZZ) C_(n, m) e^(2 pi i(n alpha_1 + m alpha_2)) e^(2 pi i (n x + m y)). $
+    Therefore, $T$ is ergodic if and only if $n alpha_1 + m alpha_2 in.not ZZ$ for all $n, m in ZZ without {(0, 0)}.$
 
+  + Ergodicity is equivalent to $sum_(i = 1)^n k_i alpha_i in.not ZZ$ for all $k_i in ZZ without {0}.$
 ]
 
 #pagebreak()
