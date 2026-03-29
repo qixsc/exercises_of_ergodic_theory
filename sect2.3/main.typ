@@ -70,6 +70,11 @@
   Prove that any factor of an ergodic measure-preserving system is ergodic.
 ]
 #proof[
+  Suppose $(X, cal(B), mu, T)$ is an ergodic system and $(Y, cal(F), nu, S)$ is a factor of $(X, cal(B), mu, T)$ by the map $phi: X -> Y.$
+  Then, if a set $B in cal(F)$ that $S^(-1) B = B,$ let $A = phi^(-1) (B)$ and get
+  $ T^(-1) A = T^(-1) compose phi^(-1) (B) = phi^(-1) S^(-1) (B) = phi^(-1) (B) = A. $
+  Since $T$ is ergodic, $mu(A) in {0, 1}.$
+  By the measure-preserving property of $phi,$ we have $nu(B) in {0, 1}$ and $S$ is ergodic.
 ]
 
 #pagebreak()
@@ -79,6 +84,9 @@
   $f compose T = f$ almost everywhere implies that $f$ is almost everywhere equal to a constant.
 ]
 #proof[
+  Since $f compose T = f$ a.e. implies $f$ constant a.e. is equivalent to ergodicity for any $f$ is measurable, thus the ergodicity implies the condition for all $f in L^p,$ $p in [1, infinity].$ 
+  Then, for any $B$ that $B = T^(-1) B,$ $chi_B in L^p$ for all $p in [1, infinity]$ and $chi_B compose T = chi_(T^(-1) B) = chi_(B)$ implies $chi_B$ is a constant a.e.
+  Therefore, $mu(B)$ must be in ${0, 1}.$
 ]
 
 #pagebreak()
