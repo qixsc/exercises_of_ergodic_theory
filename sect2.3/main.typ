@@ -95,6 +95,17 @@
   $f: X -> RR$ with $f(T x) >= f(x)$ almost everywhere is equal to a constant almost everywhere. 
 ]
 #proof[
+  Suppose $f$ measurable and $f(T x) >= f(x)$ a.e., then for any $n in NN, k in ZZ,$ define
+  $ A_n^k = {x in X: f(x) <= k/n}. $
+  Suppose $A = A_n^k$ that $mu(A) > 0.$
+  Since $T^(-1) (A) = {x in X: f(T x) <= k/n} subset.eq A$ (a.e.) by $f(T x) >= f(x)$ a.e.,
+  $mu(union T^(-n) A) = mu(A).$
+  By ergodicity of $T,$ $mu(union T^(-n) A) = 1$ if $mu(A) > 0$ implies $mu(A_n^k) in {0, 1}$ for all $n, k.$
+  Therefore, $f$ can only be constant a.e.
+
+  Conversely, suppose $B subset X$ that $T^(-1) (B) = B.$
+  Then, $chi_B$ is measurable and $chi_B (T x) = chi_(T^(-1) B)(x) = chi(B).$
+  Therefore $chi_B$ is constant a.e. implies $mu(B) in {0, 1}.$
 ]
 
 #pagebreak()
