@@ -12,6 +12,7 @@
 )
 #let supp = math.op("supp")
 #let closure = math.op("cl")
+#let range = math.op("Ran")
 
 #align(center+horizon)[
   *Exercises of Ergodic Theory*\
@@ -59,7 +60,23 @@
   Suppose both are the map from $TT^d -> TT^d.$
   Suppose $T$ is an ergodic (hyperbolic) toral automorphism with the form $T(x) = A x mod 1,$
   where $A$ is an integer matrix with $det(A) eq.not 0$ and the eigenvalues of $A$ are not on the unit circle.
-  
+  And supppose $R(x) = x + alpha mod 1$ be an ergodic circle rotation, which is, the entries of $alpha$ is independent on $QQ$.
+
+  Let $E_n(x) = e^(2 pi i n dot x)$ be the basis of Fourier series.
+  $ U_R (E_n) (x) = e^(2 pi i n dot (x + alpha)) = e^(2 pi i n dot alpha) e^(2 pi i n dot x). $
+  Thus, $U_R$ has eigenvalue $e^(2 pi i n dot alpha)$ and eigenfunction $E_n (x)$.
+  However,
+  $ U_T (E_n) (x) = e^(2 pi i n dot A x) = E_(A^(T) n) (x), $
+  which is, some of $E_n$ is not eigenfunction of $U_T.$
+
+  Assume that the two ergodic system are measurably isomorphic by the map $phi: (E_R, cal(B)(TT^d), m_(TT^d), R) -> (E_T, cal(B)(TT^d), m_(TT^d), T),$
+  where $E_R, E_T subset TT^d$ has full measure.
+  By the assumption that $phi compose T = R compose phi.$
+  Suppose $f, g in L^2 (TT^d)$ such that $g = f compose phi$ and $U_R f = lambda f.$
+  Then, $ U_T (g) = g compose R = f compose phi compose T = f compose R compose phi = (U_R f) compose phi. $
+  By the assumption that $U_R f = lambda f,$
+  $ U_T (g) = lambda f compose phi = lambda g, $
+  which contradicts to the discussion of eigenfunction of $U_T$.
 ]
 
 #pagebreak()
@@ -68,6 +85,17 @@
   if and only if the subgroup ${g^n: n in ZZ}$ generate by $g$ is dense in $X.$ 
 ]
 #proof[
+  Let $U_(R_g): L^2 (X) -> L^2 (X)$ and $f in L^2 (x)$ is $R_g$-invariant.
+  Sicne $X$ is a compact abelian group, $hat(X)$ is an orthogonal basis on $L^2 (X),$
+  and $f = sum_(chi in hat(X)) c_chi chi.$
+  Then, $R_g^k f = sum_(chi in hat(X)) (chi(g)^k c_chi) chi$ for all $k in NN.$
+  Hence we have $c_chi = chi(g)^k c_chi$ for all $chi in hat(X)$ and $k in NN.$
+
+  If ${g^n}$ is dense in $X,$ we have $closure({chi(g)^n}) = range chi$ and thus $c_chi = 0$ if $range chi eq.not {1}.$
+  Therefore, $f$ can only be the trivial character and $R_g$ is ergodic.
+
+  If $R_g$ is ergodic, assume that ${g^n}$ is not dense in $X,$ which is, $G = closure({g^n})$ is proper subgroup of $X.$
+  Then there is a nontrivial character $chi$ that $chi(y) = 1$ for $y in G$ and it is $R_g$-invariant, contradicts to $R_g$ is ergodic..
 ]
 
 #pagebreak()
