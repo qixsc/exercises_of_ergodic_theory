@@ -90,13 +90,11 @@
     Union of the sets $D(x, 1/k)$ for $x in F_k$ and $G_(x, k),$ called $E_k$, is measure zero since it is union of finite measure zero sets.
     Last, the union of $E_k$ for all $k in NN$ is still measure zero and for all $x in X without (union E_k)$
     satisfies $T^(n_k) x -> x$ as $k -> infinity$ by choosing indices from each step. 
-  + Suppose $S = supp(mu) := {x in X: mu(D(x, r)) > 0 forall r > 0}.$
-    / Claim that $mu(S) = 1.$: Observe on the set $S^c = X without S,$ $x in S^c$ implies there is some $r_x > 0$ such that $mu(D(x, r_x)) = 0.$
-      Also, the $D(x, r_x)$ is the open ball contains in $S^c,$ which implies $S^c$ is open.
-      Therefore, $mu(S^c) = mu(union_(x in S^c) D(x, r_x))$ by open.
-      For any countable index set $II subset S^c,$ we have $ mu(union_(x in II) D(x, r_x)) <= sum_(x in II) mu(D(x, r_x)) = sum_(x in II) 0 = 0. $
-      By the definition of uncountable summation, $ mu(S^c) <= sum_(x in S^c) mu(D(x, r_x)) = sup_(II) sum_(x in II) mu(D(x, r_x)) = 0. $
-      Thus, $mu(S) = 1.$    
+  + Suppose $S = supp(mu) := {x in X: mu(D(x, r)) > 0 forall r > 0}$ is derived from delete the biggest null open set from the space.
+    / Prove for the existence of $S$:
+      Let $G$ is a null open set and there is some $x in X without G$ such that $mu(D(x, r)) = 0$ for some $r > 0.$     
+      Then $G' = G union D(x, r) supset G$ is a null open set.
+      From Zorn's lemma, we can get a maximal element $M$ that is a null open set and $mu(D(x, r)) > 0$ for all $r > 0$ and $x in X without M.$
     Then, for any $r > 0.$
     / Claim that $S$ is cover by at most countable open ball with radius $r$:
       Suppose $R$ is a collection of points in $S$ such that $x, y in R,$ $d(x, y) > r.$
