@@ -13,11 +13,6 @@
 #let supp = math.op("supp")
 #let closure = math.op("cl")
 
-#align(center+horizon)[
-  *Exercises of Ergodic Theory*\
-  Last update in #datetime.today().display() by Qi-Xiang Huang.
-]
-#pagebreak()
 = Exercise for Sect. 2.3
 #exercise("2.3.1")[
   Show that ergodicity is not preserved under direct products as follows.

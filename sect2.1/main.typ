@@ -10,11 +10,7 @@
   variant: "Exercise",
   color: orange,
 )
-#align(center+horizon)[
-  *Exercises of Ergodic Theory*\
-  Last update in #datetime.today().display() by Qi-Xiang Huang.
-]
-#pagebreak()
+
 = Exercise for Sect. 2.1
 #exercise("2.1.1")[
  Show that the space $(TT, cal(B)_TT, m_TT)$ is isomorphic as a measure space to $(TT^2, cal(B)_(TT^2), m_(TT^2)).$

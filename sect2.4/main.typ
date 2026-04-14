@@ -14,11 +14,6 @@
 #let closure = math.op("cl")
 #let range = math.op("Ran")
 
-#align(center+horizon)[
-  *Exercises of Ergodic Theory*\
-  Last update in #datetime.today().display() by Qi-Xiang Huang.
-]
-#pagebreak()
 = Exercise for Sect. 2.4
 #exercise("2.4.1")[
   Give a different proof that the circle rotation $R_alpha: TT -> TT$ is ergodic if $alpha$ is irraional,

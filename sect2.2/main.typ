@@ -12,11 +12,6 @@
 )
 #let supp = math.op("supp")
 
-#align(center+horizon)[
-  *Exercises of Ergodic Theory*\
-  Last update in #datetime.today().display() by Qi-Xiang Huang.
-]
-#pagebreak()
 = Exercise for Sect. 2.2
 #exercise("2.2.1")[
   Prove the following version of Poincare recurrence with a weaker hypothesis
