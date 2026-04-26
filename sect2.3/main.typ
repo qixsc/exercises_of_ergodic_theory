@@ -117,7 +117,7 @@
 #proof[
   For any $k in NN,$ we can find an finite open cover ${D(z^k_j, 1/2k)}$ of $X$ by the compactness of $X.$
   For any $y in supp(mu),$ $y in D(z^k_j, 1/2k)$ for some $j in NN$, then $D(z^k_j, 1/2k) supset D(y, r)$ for some $r > 0$ and thus $mu(D(z^k_j, 1/2k)) >= mu(D(y, r)) > 0.$
-  Then, let $E^k_j = {x in X: T^n x in D(z^k_j) "i.o."}$, since $E^k_j$ is $T$-invariant, $mu(E^k_j) in {0, 1}.$
+  Then, let $E^k_j = {x in X: T^n x in D(z^k_j, 1/2k) "i.o."}$, since $E^k_j$ is $T$-invariant, $mu(E^k_j) in {0, 1}.$
   Since $D(z^k_j, 1/2k)$ has positive measure, by recurrence theorem, almost every points returns to $D(z^k_j, 1/2k)$ implies $mu(E^k_j) > 0.$
   Therefore, let $E_k = inter_j E^k_j,$ $E_k$ has measure one and it goes to somewhere near(with distance less than $1/k$) to any $y in supp(mu)$ infinitely often.
   Hence, let $E = inter_k E_k,$ we have $mu(E) = 1$ and for all $x in E$ and all $y in supp(mu),$ there exists a sequence $n_k arrow.tr infinity$ such that $T^(n_k) x -> y.$

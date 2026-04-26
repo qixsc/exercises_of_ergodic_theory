@@ -88,7 +88,7 @@
     Define $T$ by $(T x)_n = x_(n+1)$ for $x in X$ which is the left shift map on $X$.
     Then, claim that $phi(x_n) = x_n + x_(n+1) mod 2$ is a non-trivial factor map on $X$ to itself.
 
-    First, $phi$ is not an isomorphism since it maps two elements (one solution and its comjugate) to one element,
+    First, $phi$ is not an isomorphism since it maps two elements (one solution and its conjugate) to one element,
     and $phi$ is surjective since for $y in X, y = y+0 mod 2.$
     Then, $(phi compose T(x))_n = phi((T x)_n) = phi(x_(n+1)) = x_(n+1) + x_(n+2) mod 2 = (phi(x))_(n+1) = T((phi(x))_n) = (T compose phi (x))_n.$
 
