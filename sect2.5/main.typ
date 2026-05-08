@@ -93,12 +93,29 @@
   $A_N (f) -> integral f dif mu$ as $N -> infinity$ for all $f$ in a dense subset of $L^1_mu.$
 ]
 #proof[
+  If $T$ is ergodic, then just use the ergodic theorem.
+
+  Suppose $A_N (f) -> integral f dif mu$ as $N -> infinity$ for all $f$ in a dense subset of $L^1_mu.$
+  Let $B$ be a $T$-invariant set in $cal(B)$ and thus $exists f_n in L^1_mu$ such that
+  each $f_n$ satisfies $A_N (f_n) -> integral f_n dif mu$ and $f_n-> chi_B$ in $L^1_mu.$
+
+  Since $f_n -> chi_B$ in $L^1_mu,$ $integral f_n dif mu -> mu(B).$
+  For any $epsilon > 0,$ we have an $N_1 in NN$ such that $norm(f_n - chi_B)_1 < epsilon$ and $abs(mu(B) - integral f_n dif mu) < epsilon$ for all $n > N_1.$ 
+  Then, for all $N in NN$ and fixed an $n > N_1,$
+  $
+    norm(A_N (f_n) - chi_B)_1 = norm(1/N sum_(i=0)^(N-1) (f_n compose T^i - chi_B))_1 = 1/N norm(sum_(i=0)^(n-1) (f_n - chi_B) compose T^i)_1 <= 1/N (N dot.c epsilon) = epsilon.
+  $
+  Thus, for $N$ is large such that $norm(A_N (f_n) - integral f_n dif mu)_1 < epsilon,$
+  $
+    norm(chi_B - integral chi_B dif mu)_1 <= norm(chi_B - A_N (f_n))_1 + norm(A_N (f_n) - integral f_n dif mu)_1 + norm(integral f_n dif mu - integral chi_ dif mu)_1 < 3 epsilon.
+  $
+  Since $chi_B$ take values on ${0, 1},$ we have $mu(B) = integral chi_B dif mu in {0, 1}$ and $T$ is ergodic.
 ]
 
 #pagebreak()
 #exercise("2.5.4")[
   Show that
-  $lim_(N-M -> infinity) 1/(N-M) sum_(n=M)^(N-1) U^n_T f -> P_T f.$
+  $ lim_(N-M -> infinity) 1/(N-M) sum_(n=M)^(N-1) U^n_T f -> P_T f. $
 ]
 #proof[
 ]
