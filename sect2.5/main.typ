@@ -118,6 +118,9 @@
   $ lim_(N-M -> infinity) 1/(N-M) sum_(n=M)^(N-1) U^n_T f -> P_T f. $
 ]
 #proof[
+  Since $U_T$ is unitary and so continuous,
+  $ lim_(N-M -> infinity) 1/(N-M) sum_(n=M)^(N-1) U^n_T f attach(=, b: k=N-M) U_T^M (lim_(k -> infinity) 1/(k) sum_(n=0)^(k-1) U^n_T f) -> U^m_T (P_T f). $
+  Since $P_T f in I$ which is invariant subspace, $U^m_T P_T f = P_T f.$
 ]
 
 #pagebreak()
@@ -125,9 +128,10 @@
   For any set $B$ of positive measure in a measure-preserving system $(X, cal(B), mu, T),$
   $ E = {n in NN: mu(B inter T^(-n) B > 0)} $
   is syndetic:
-  that is, there are finitely many integers $k_1, dots, k_s$ with the property that $NN subset union_(i=1)^s E - k_i.$
+  that is, there are finitely many integers $k_1, dots, k_s$ with the property that $NN subset union.big_(i=1)^s E - k_i.$
 ]
 #proof[
+  
 ]
 
 #pagebreak()
@@ -145,4 +149,13 @@
   and that $T^((K))$ is not totally ergodic if $K > 1.$
 ]
 #proof[
+  If $T$ is ergodic w.r.t. $mu,$ let $B in cal(B)^((K))$ be an $T^((K))$-invariant set.
+  By the invariance, we have if $(x, k) in B$ for some $k,$ $(x, k) in B$ for all $k$ and $B|_X$ ($B$ restrict on $X$) should be $T$-invariant set.
+  Thus, $mu^(K) (B) = mu(B|_X) in {0, 1}$ implies the ergodicity of $T^((K)).$
+
+  If $T^((K))$ is ergodic w.r.t. $mu^((K)),$ and $B in cal(B)$ is $T$-invariant.
+  Then $B^((K)) = {(x, k): x in B, k in {1, dots, k}}$ is $T^((K))$-invariant with measure $mu^((K)) (B^((K))) = mu(B) in {0, 1}.$
+  Therefore, $T$ is ergodic.
+
+  For $K > 1,$ $(T^((K)))^(K)$ is not ergodic with the invariant set ${(x, 1): x in B}$ for some invariant set $B$ of $T$ and thus $T^((K))$ is not totally ergodic.
 ]
