@@ -131,7 +131,21 @@
   that is, there are finitely many integers $k_1, dots, k_s$ with the property that $NN subset union.big_(i=1)^s E - k_i.$
 ]
 #proof[
-  
+  Suppose $B$ is a positive measure set,
+  $ mu(B inter T^(-n) B) = integral chi_B compose T^n dot.c chi_B dif mu = inner(U_T^n chi_B, chi_B). $  
+  By 2.5.4, we have
+  $ lim_(N - M -> infinity) 1/(N-M) sum_(n=M)^(N-1) inner(U_T^n chi_B, chi_B) = inner(P_T chi_B, chi_B). $
+  Since $P_T$ is orthogonal projection, $inner(P_T chi_B, chi_B) = norm(P_T chi_B)_2^2.$
+  Also, since $P_T$ is orthogonal projection and thus self-adjoint,
+  $inner(P_T chi_B, chi_X) = inner(chi_B, P_T chi_X) = inner(chi_B, chi_X) = mu(B)$
+  since $chi_X$ is $T$-invariant.
+  Then, by Cauchy inequality, $0 < mu(B)^2 = (inner(P_T chi_B, chi_X))^2 <= norm(P_T chi_B)_2^2 dot.c norm(chi_X)_2^2 = norm(P_T chi_B)_2^2.$
+
+  For all $epsilon > 0,$ there is an $L in NN$ such that for all $M,$ $abs(1/(N-M) sum inner(U^n_T chi_B, chi_B) - inner(P_T chi_B, chi_B)) < epsilon$ for all $N >= L.$
+  Take the $epsilon = mu(B)/2, $ we have $1/(L-M) sum inner(U_T^n chi_B, chi_B) > mu(B)/2 > 0$ for any $M.$
+  Since each term is non-negative, the sum is greater than zero if there is some terms is positive. 
+  That is, we have no consecutive $L$ intergers from any start point $M$ is not in $E.$
+  Thus, take $s = L$ and $k_i = i$ and proved $E$ is syndetic.
 ]
 
 #pagebreak()
