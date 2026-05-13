@@ -28,16 +28,28 @@
     where the orbit of $x$ has cardinality $p_x$ under $sigma.$
 ]
 #proof[
+  Let $(X, cal(P) (X), mu, sigma)$ be a measure-preserving system by defining $mu(B) = 1/r abs(B)$ for any set in $cal(P)(X).$ 
+  $sigma$ is ergodic if it is cyclic.
+  + By the ergodic theorem, for any $f: X -> RR$ (it automatically satisfies measurable and $L^1$),
+    we have $lim_(n -> infinity) 1/n sum_(j=0)^(n-1) f compose sigma^j (x) = integral f(x) dif mu = 1/r (f(x_1) + dots.c + f(x_r)).$
+  + Just restrict the space to the orbit of $x.$
 ]
 
 #pagebreak()
 #exercise("2.6.2")[
   Minic the proof of finite Vitali covering lemma to prove that for any collection of intervals
   $ I_1 = [a_1, a_1 + l(1)-1], dots, I_K = [a_K, a_K + l(K)-1] $
-  in $ZZ$ there is a disjoint subcollection $I_(j(1)), dots, I_(j(K))$ such that 
+  in $ZZ$ there is a disjoint subcollection $I_(j(1)), dots, I_(j(k))$ such that 
   $ I_1 union dots.c union I_K subset.eq union.big_(m=1)^k [a_(j(m)) - l(j(m)), a_(j(m)) + 2 l(j(M)) - 1]. $
 ]
 #proof[
+  Let $R = {1, 2, dots, K}$ be the remaining set.
+  Let $j(1) in R$ that $l(j(1))$ is the biggest one in ${l(k): k in R}.$
+  Then, remove the elements $e$ in $R$ such that $I_e inter I_(j(1)) eq.not emptyset.$
+  We have $I_e subset [a_(j(1)) - l(j(1)), a_(j(1)) + 2 l(j(1)) - 1]$ since $l(e) <= l(j(1))$ and $abs(a_e - a_(j(1))) < l(e) + l(j(1)) <= 2l(j(1))$
+  by $I_e inter I_(j(1)) eq.not emptyset.$
+  Then, do the same procedure again and again until there is nothing left in $R$.
+  We have the disjoint subcollection $I_(j_1), dots, I_(j_k).$
 ]
 
 #pagebreak()
