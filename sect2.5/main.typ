@@ -107,7 +107,7 @@
   $
   Thus, for $N$ is large such that $norm(A_N (f_n) - integral f_n dif mu)_1 < epsilon,$
   $
-    norm(chi_B - integral chi_B dif mu)_1 <= norm(chi_B - A_N (f_n))_1 + norm(A_N (f_n) - integral f_n dif mu)_1 + norm(integral f_n dif mu - integral chi_ dif mu)_1 < 3 epsilon.
+    norm(chi_B - integral chi_B dif mu)_1 <= norm(chi_B - A_N (f_n))_1 + norm(A_N (f_n) - integral f_n dif mu)_1 + norm(integral f_n dif mu - integral chi_B dif mu)_1 < 3 epsilon.
   $
   Since $chi_B$ take values on ${0, 1},$ we have $mu(B) = integral chi_B dif mu in {0, 1}$ and $T$ is ergodic.
 ]

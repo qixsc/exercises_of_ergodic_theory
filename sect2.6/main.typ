@@ -60,6 +60,29 @@
   almost everywhere.
 ]
 #proof[
+  By the ergodic theroem, we have $f^*, g^* in L^1$ such that for almost every $x in X,$
+  $ lim_(N -> infinity) 1/N sum_(n=0)^(N-1) f(T^n x) = f^* (x), lim_(N -> infinity) 1/N sum_(n=0)^(N-1) f(T^(-n) x) = g^* (x). $
+  Also we have $integral f dif mu = integral f^* dif mu = integral g^* dif mu,$ $f^*$ is $T$-invariant and $g^*$ is $T^(-1)$-invariant.
+  Besides, we have $integral f^* - g^* dif mu = 0$ and we want to show that $integral abs(f^* - g^*) dif mu = 0.$
+
+  First, we want to show $T$-invariance is equivalent to $T^(-1)$-invariance.
+  Suppose $A$ is a $T$-invariant set, $T^(-1) A = A.$
+  This implies that $T A = A$ and $T A^c = A^c.$
+  Thus, $(T^(-1))^(-1) A = T A = A$ and $A$ is a $T^(-1)$-invariant set.
+  For a $T$-invariant $L^1$ function $f,$ $f compose T = f$ almost everywhere.
+  Since $T$ is invariable and measure-preserving, compose $T^(-1)$ on both side and get
+  $f = f compose T^(-1)$ almost everywhere.
+  Therefore, $T$-invariant function is $T^(-1)$-invariant.
+
+  Next, for any $T$-invariant set $A,$ restrict the space to $A,$ and use the ergodic theorem again.
+  Then we have $integral_X chi_A dot.c (f^* - g^*) dif mu = mu(A) integral_A f^* - g^* dif mu_A = 0$ for any $T$-invariant set $A.$
+  (Note that the $mu_A (B) = mu(B)/mu(A)$ is not defined when $mu(A) = 0,$ however, the integral is still zero by the integral on $X$.)
+
+  Then, let $A = {x in X: f^* (x) > g^* (x)}$ and $B = {x in X: f^* (x) < g^* (x)}.$
+  $A, B$ are $T$-invariant by the invariance of $f^*$ and $g^*.$
+  By the argument above,
+  $ integral abs(f^*-g^*) dif mu = integral_A f^* - g^* dif mu - integral_B f^* - g^* dif mu = 0 + 0 = 0. $
+  Thus, $norm(f^* - g^*)_1 = 0$ implies $f^* = g^*$ in $L^1$ and $f^* = g^*$ almost everywhere.
 ]
 
 #pagebreak()
