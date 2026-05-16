@@ -98,4 +98,17 @@
   under the assumption of ergodicity.
 ]
 #proof[
+  Suppose that $(X, cal(B), mu, T)$ be an ergodic system.
+  Suppose $f: X -> RR$ be a positive measurable function with $integral f dif mu = infinity.$
+  Then, for almost every $x in X,$ $lim_(N -> infinity) 1/N sum_(n=0)^(N-1) f(T^n x) = infinity.$
+
+  For each $M in NN,$ let $f_M (x) = min {f(x), M}$ be truncated function of $f.$
+  Since $f_M$ is bounded, $f_M in L^1$ so use Birkhoff ergodic theorem,
+  $ lim_(N -> infinity) 1/N sum_(n=0)^(N-1) f_M (T^n x) = integral f_M dif mu "for" x in A_M, $
+  where $A_M$ is a full measure set.
+  By the definition of truncation, we have for all $x in A_M,$
+  $ lim_(N -> infinity) 1/N sum_(n=0)^(N-1) f (T^n x) >= lim_(N -> infinity) 1/N sum_(n=0)^(N-1) f_M (T^n x) = integral f_M dif mu. $
+  Let $A = inter.big_(M in NN) A_M,$ $A$ is full measure and
+  $ lim_(N -> infinity) 1/N sum_(n=0)^(N-1) f (T^n x) >= lim_(M -> infinity) integral f_M dif mu. $
+  By monotone converge theorem, $f_M -> f$ implies the rhs is infinity.
 ]
