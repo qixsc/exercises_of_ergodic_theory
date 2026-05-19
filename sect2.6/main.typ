@@ -87,9 +87,36 @@
 
 #pagebreak()
 #exercise("2.6.4")[
-  Fill in the details to prove the estimate in $(2.28).$
+  Fill in the details to prove the estimate in (2.28).
 ]
 #proof[
+  Clearly $A_N (F_0) = F_0$ since $F_0$ is $T$-invariant,
+  while if $M$ is fixed and $N -> infinity$ we have
+  $
+    norm(A_N (A_M (f_0)) - A_N (f_0))_infinity
+    &= norm(1/(N M) sum_(n=0)^(N-1) sum_(m=0)^(M-1) f_0 compose T^(n+m) - 1/(N M) sum_(n=0)^(N-1) sum_(m=0)^(M-1) M dot.c f_0 compose T^n)_infinity\
+    &= 1/(N M) norm(sum_(k=0)^(N+M-2) (c_k - d_k) f_0 compose T^k)_infinity,\
+  $
+  where
+  $
+    c_k = cases(
+      k+1 quad &"if" 0 <= k < M-1,
+      M quad &"if" M-1 <= k <= N-1,
+      N+M-1-k quad &"if" N <= K <= N+M-2
+    ), quad
+    d_k = cases(
+      M quad &"if" 0 <= k <= N-1,
+      0 quad &"if" N-1 < k
+    ).
+  $
+  Thus,
+  $
+    norm(A_N (A_M (f_0)) - A_N (f_0))_infinity
+    &= norm(1/(N M) sum_(k=0)^(M-2) (k+1-M) f_0 compose T^k + sum_(k=N)^(N+M-2) (N+M-1-k) f_0 compose T^k)_infinity\
+    &<= norm(f_0)_infinity/(N M) (sum_(k=0)^(M-2) (k+1-M) + sum_(k=N)^(N+M-2) (N+M-1-k))\
+    &= norm(f_0)_infinity/(N M) ((M(M-1))/2 + (M(M-1))/2)\
+    &= (M-1) dot.c (norm(f_0)_infinity/N).
+  $
 ]
 
 #pagebreak()
