@@ -54,10 +54,20 @@
     $ 1/N sum_(n=0)^(N-1) abs(nu(A inter S^(-n) B) - nu(A) nu(B)) = 1/N sum_(n=0)^(N-1) abs(mu(phi^(-1) (A inter S^(-n) B)) - mu(phi^(-1) (A)) mu(phi^(-1) (B))) -> 0 $
     by the measure-preserving property of $phi.$
   + Suppose $U_T f = lambda f$ almost everywhere.
-    Take norm on both sides and $U_T$ is isometry, $norm(f)_2 = abs(lambda) norm(f)_2$ implies $abs(lambda) = 1.$
-    Take absolute value pointwise on both sides yields $U_T abs(f(x)) = abs(U_T f (x)) = abs(lambda) abs(f(x)) = abs(f(x))$ almost everywhere.
+    Take norm on the both sides and $U_T$ is isometry, $norm(f)_2 = abs(lambda) norm(f)_2$ implies $abs(lambda) = 1.$
+    Take absolute value pointwisely on the both sides yields $U_T abs(f(x)) = abs(U_T f (x)) = abs(lambda) abs(f(x)) = abs(f(x))$ almost everywhere.
     Thus, $abs(f)$ is $T$-invariant and it is constant by the ergodicity of $T$ (from weak-mixing.)
-  + 
+  + By the arguments above, let $lambda = e^(2 pi i alpha)$ for some $alpha in TT.$
+    If $abs(f) = 0$ almost everywhere, the map is trivial.
+    Suppose $abs(f) = c > 0,$ $f(x)/abs(f(x)) in SS^1$ and let $e^(2 pi i phi(x)) = f(x)/abs(f(x)).$
+    Now prove that $phi$ is the factor map.
+    First, since $phi(x) = arg(f(x)/abs(f(x))),$ $phi$ is automatically measurable.
+    Second, since $U_T f/abs(f) = lambda f/abs(f),$ $e^(2 pi i phi (T x)) = e^(2 pi i alpha) e^(2 pi i phi(x)) = e^(2 pi i (phi(x) + alpha)).$
+    This proves $phi compose T = R_alpha compose phi.$
+    Since $$
+    Last, let $nu = mu compose phi^(-1)$ be the push-forward measure. 
+    For a measurable set $A in cal(B)_TT$ and $t in TT,$
+    $nu(t + A) = mu(phi^(-1) (t + A)) = mu()$
 ]
 
 #pagebreak()
@@ -68,6 +78,21 @@
   $ (X^((K)), cal(B)^((K)), mu^((K)), T^((K))). $
 ]
 #proof[
+  First suppose $S$ is ergodic.
+  Suppose $K$ is the smallest integer such that $S^K$ is not ergodic.
+  Since $S^K$ is not ergodic, $U_(S^K) = (U_S)^K$ contains non-constant eigenfunction $g$ such that $(U_S)^K g = g.$
+  Let $lambda = e^((2 pi i)/K)$ and $U_S g = lambda g.$
+  Since $U_S abs(g) = abs(U_S g) = abs(lambda) abs(g) = abs(g),$ $abs(g)$ is $S$-invariant and then is constant almost everywhere.
+  Without loss of generality, assume $abs(g) = 1$ a.e.
+
+  For $g^K,$ $g^K (S y) = (g(S y))^K = (lambda g(y))^K = g^K (y)$ is $S$-invariant.
+  Thus, $g^K = 1$ a.e. and $g(y) in {lambda^k: k in [0, K-1] inter NN}$ a.e.
+  Let $A_k = g^(-1) ({lambda^k})$ for $k in [0, K-1] inter NN$ and then ${A_k}$ is a partition of $Y.$
+  The sets also have the cyclic property, which is, $S^(-1) A_k = A_(k+1 mod K).$
+  By $S$ is measure-preseving, $nu(A_k) = 1/K$ for all $k.$
+
+  Let $X = A_0, cal(B) = cal(B)_Y|_(A_0), mu = K nu|_(A_0),$ and $T = S^K.$
+  And ...
 ]
 
 #pagebreak()
@@ -78,4 +103,11 @@
   and there use the fact that $1/N sum_(n=1)^N rho^n$ converges for $rho in SS^1.$
 ]
 #proof[
+  For any $c_1, c_2, dots, c_k in CC$ and $n_1, n_2, dots, n_k in NN,$
+  $
+    sum_(i=1)^k sum_(j=1)^k c_i overline(c_j) inner(U^(n_i-n_j)_T f, f)
+    &= sum_(i=1)^k sum_(j=1)^k inner(c_i U^(n_i)_T f,  c_j U^(n_j)_T f)\
+    &= inner(sum_(i=1)^k c_i U^(n_i)_T f, sum_(j=1)^k c_j U^(n_j)_T f)\
+    &= norm(sum_(i=1)^k c_i U^(n_i)_T f)_2 >= 0.
+  $
 ]
