@@ -18,7 +18,7 @@
 = Exercise for Sect. 2.9
 #exercise("2.9.1")[
   Let $(X, cal(B), mu, T)$ be a measure-preserving system,
-  and ket $r: X -> NN_0$ be a map in $L^1_mu.$
+  and let $r: X -> NN_0$ be a map in $L^1_mu.$
   The suspension defined by $r$ is the system
   $(X^((r)), cal(B)^((r)), mu^((r)), T^((r))),$
   where
@@ -28,15 +28,29 @@
   - $mu^((r))$ is defined by $mu^((r)) (X times N) = 1/(integral r dif mu) mu(A) times abs(N)$
     for $A in cal(B)$ and $N subset.eq NN$;
   and
-  - #h(1fr) $ T^((r)) (x, n) = cases(
-      (x, n+1) quad &"if" n+1 < r(x),
-      (T(x), 0) quad &"if" n+1 = r(x).
-    ) $ 
+  $ T^((r)) (x, n) = cases(
+    (x, n+1) quad &"if" n+1 < r(x),
+    (T(x), 0) quad &"if" n+1 = r(x).
+  ) $ 
   + Verify that this defines a finite measure-preserving system.
   + Show that the induced map on the set $A = {(x, 0): x in X}$
     is isomorphic to the original system $(X, cal(B), mu, T).$
 ]
 #proof[
+  + Suppose $E in cal(B)^((r)),$
+    we can divide $E$ into disjoint sets $E = union.sq.big_(n in NN) E_n$
+    where $E_n = F_n times {n}$ for some $F_n in cal(B).$
+    If $n >= 1,$ $mu^((r)) (E_n) = mu^((r)) (F_n times {n-1}) = mu^((r)) (E_n).$
+    And if $n = 0,$ $mu^((r)) (E_n) = mu^((r)) ({(y, r(y) - 1): T y  = x "for some" x in F_n}) = 1/(integral r dif mu) mu(T^(-1) F_n) = mu(E_n).$
+    Thus, $mu^((r))$ is measure-preserving.
+
+    The space $X^((r))$ also can be divide into disjoint sets $X_n = {(x, n): x in X, r(x) > n}.$
+    Then, $mu^((r)) (X^((r))) = mu^((r)) (union.sq.big X_n) = 1/(integral r dif mu) mu({x in X: r(x) > n}) = 1.$
+    Thus, $(X^((r)), cal(B)^((r)), mu^((r)), T^((r)))$ is a finite measure-preserving system.
+
+  + By the definition, we can easily see that $T_A (x, 0) = (T x, 0),$
+    and the bimeasurable bijection from induced map to original system is the projection
+    $pi: A -> X$ by $pi(x, 0) = x.$
 ]
 
 #pagebreak()
